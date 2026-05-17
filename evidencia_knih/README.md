@@ -23,4 +23,4 @@ Databáza sa vytvorí pomocou súboru database.sql.
 
 ## Autor
 
-Meno: doplň svoje meno
+Meno: Martin Ondráš, Ema Jurčíková
