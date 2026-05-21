@@ -34,7 +34,8 @@ $authors_result = mysqli_query($conn, $sql_authors);
 
 $sql_books = "SELECT books.id, books.title, books.year, authors.name AS author_name
               FROM books
-              JOIN authors ON books.author_id = authors.id";
+              JOIN authors ON books.author_id = authors.id
+              ORDER BY books.id DESC";
 
 $books_result = mysqli_query($conn, $sql_books);
 ?>
@@ -96,6 +97,7 @@ $books_result = mysqli_query($conn, $sql_books);
             <th>Názov knihy</th>
             <th>Rok</th>
             <th>Autor</th>
+            <th>Akcie</th>
         </tr>
 
         <?php while ($book = mysqli_fetch_assoc($books_result)) { ?>
@@ -104,6 +106,17 @@ $books_result = mysqli_query($conn, $sql_books);
                 <td><?php echo $book["title"]; ?></td>
                 <td><?php echo $book["year"]; ?></td>
                 <td><?php echo $book["author_name"]; ?></td>
+                 <td>
+                    <a class="edit" href="edit.php?id=<?php echo $book["id"]; ?>">
+                        Upraviť
+                    </a>
+
+                    <a class="delete" 
+                       href="delete.php?id=<?php echo $book["id"]; ?>" 
+                       onclick="return confirm('Naozaj chcete vymazať túto knihu?');">
+                        Vymazať
+                    </a>
+                </td>
             </tr>
         <?php } ?>
 
