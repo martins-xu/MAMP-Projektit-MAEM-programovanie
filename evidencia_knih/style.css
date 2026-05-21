@@ -96,3 +96,28 @@ tr:nth-child(even) {
     border-radius: 5px;
     margin-bottom: 15px;
 }
+.edit {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.delete {
+    color: #dc2626;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 15px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.edit:hover,
+.delete:hover,
+.back:hover {
+    text-decoration: underline;
+}
