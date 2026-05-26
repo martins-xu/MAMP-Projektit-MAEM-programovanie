@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
+
 $sql_authors = "SELECT * FROM authors";
 $authors_result = mysqli_query($conn, $sql_authors);
 
@@ -45,7 +46,8 @@ $books_result = mysqli_query($conn, $sql_books);
 <head>
     <meta charset="UTF-8">
     <title>Evidencia kníh</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css?v=20">
+  
 </head>
 <body>
 
